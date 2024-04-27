@@ -11,4 +11,4 @@ return arr
 array=[10, 20, 30, 40, 50]
 index=2
 let res=getElementAtIndex(array,index)
-console.log(res)
+console.log(`the element at the given index(2) in the array is '${res}'`)

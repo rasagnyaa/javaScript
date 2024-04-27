@@ -8,4 +8,4 @@ return c
 }
 let arr=[1,2,3,4,5,6]
 let res=arraylength(arr)
-console.log(res)
+console.log(`length of an array is  '${res}'`)
