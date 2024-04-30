@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "prompt-sync": "^4.2.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
