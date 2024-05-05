@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+   nav{
+    /* text-align: end; */
+   
+   }
+   a{
+font-family: cursive;
+   }
+   a:hover{
+      color: red;
+   }
+    </style>
+</head>
+<body>
+  
+    <nav>
+    <ul>
+       <li><a href="prj2.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+       <li><a href="">About me</a></li>&nbsp;&nbsp;&nbsp;
+       <li><a href="project1.html">Projects</a></li>&nbsp;&nbsp;&nbsp;
+       <li><a href="">Contact me</a></li>&nbsp;&nbsp;&nbsp;
+    </ul>
+    </nav>
+    <img src="../dom/images/image.png">
+    <h1 class="h11">Hai..myself Rasagnya</h1>
+    
+   <h3 class="h12">Seeking a role as a front-end developer so I can use my thorough knowledge of programming frameworks and development software<br><br>My expertise lies in HTML, CSS, and JavaScript, and I'm well-versed in modern frameworks and libraries such as React.</h3>
+   <button type="submit">Hire me</button>
+   <button class="btnn"type="submit">Download Cv</button>
+   
+   <script>
+let a1=document.getElementsByTagName("a")
+a1[0].style.color="green"
+a1[1].style.color="green"
+a1[2].style.color="green"
+a1[3].style.color="green"
+a1[0].style.textDecoration="none"
+a1[1].style.textDecoration="none"
+a1[2].style.textDecoration="none"
+a1[3].style.textDecoration="none"
+
+let li1=document.getElementsByTagName("li")
+li1[0].style.display="inline-block"
+li1[1].style.display="inline-block"
+li1[2].style.display="inline-block"
+li1[3].style.display="inline-block"
+let nav1=document.getElementsByTagName("nav")
+nav1[0].style.textAlign="end"
+nav1[0].style.fontSize="30px"
+nav1[0].style.margin="0px 0px"
+nav1[0].style.backgroundColor="black"
+nav1[0].style.padding="15px"
+
+// nav1[0].style.display="flex"
+let h11=document.getElementsByClassName("h11")
+h11[0].style.color="red"
+h11[0].style.fontFamily="cursive"
+h11[0].style.textAlign="center"
+let h12=document.getElementsByClassName("h12")
+h12[0].style.fontFamily="cursive"
+h12[0].style.color="blue"
+h12[0].style.textAlign="center"
+let btn=document.getElementsByTagName("button")
+btn[0].style.color="black"
+btn[0].style.backgroundColor="lightblue"
+btn[0].style.fontSize="20px"
+btn[0].style.marginLeft="600px"
+btn[0].style.marginTop="20px"
+let btn1=document.getElementsByClassName("btnn")
+btn1[0].style.color="black"
+btn1[0].style.backgroundColor="lightblue"
+btn1[0].style.fontSize="20px"
+let img1=document.getElementsByTagName("img")
+img1[0].style.marginLeft="660px"
+img1[0].style.marginTop="50px"
+   </script>
+</body>
+</html>

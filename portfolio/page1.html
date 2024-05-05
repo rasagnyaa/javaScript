@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    li{
+      display: inline-block;
+      text-decoration: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .ul1{
+      text-align: end;
+      font-size: 20px;
+      background-color: aqua;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    .nav{
+      text-decoration: none;
+     
+    }
+    li:hover{
+      background-color: antiquewhite;
+    }
+      @media screen and (min-width:320px) and (max-width:425px) {
+         .nav,.ul1,a{
+color:blue;
+text-decoration: none;
+
+         }
+         body{
+            background-color: black;
+         }
+         li{
+            display: block;
+         }
+         .ul1{
+            text-align: center;
+            font-size: 20px;
+           
+            
+         }
+      }
+
+      @media screen and (min-width:425px) and (max-width:728px) {
+         .nav,.ul1,a{
+color:blue;
+
+         }
+         body{
+            background-color: burlywood;
+         }
+         li{
+            display: inline-block;
+         }
+      }
+      @media screen and (min-width:768px) and (max-width:1024px) {
+         .nav,.ul1,a{
+color:blue;
+
+         }
+         body{
+            background-color: burlywood;
+         }
+         li{
+            display:inline-block;
+         }
+      }
+    </style>
+</head>
+<body>
+   <!-- <div class="div1"> -->
+    <!-- <h1 class="heading">Portfolio</h1> -->
+       <navBar class="nav">
+        <ul class="ul1">
+      <li><a href="">Home</a></li>&nbsp;&nbsp;&nbsp;
+        <li><a href="">About me</a></li>&nbsp;&nbsp;&nbsp;
+        <li><a href="">Portfolio</a></li>&nbsp;&nbsp;&nbsp;
+        <li><a href="">Contact me</a></li>&nbsp;&nbsp;&nbsp;
+        </ul>
+   
+      </navBar>
+       <h1>hello..Myself Rasagnya</h1>
+       <h1>I'm Frontend Developer</h1>
+    <!-- </div> -->
+    
+<script>
+const li1=document.getElementsByTagName("li")
+
+
+</script>
+</body>
+</html>
