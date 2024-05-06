@@ -12,30 +12,32 @@
         justify-content: center;
         padding: 230px;
         background-color: white;
+        background-color: rgb(222, 200, 204);
     }
 
     .div1 {
         width: 500px;
-        border: 1px solid black;
+        border: 1px solid rgb(190, 164, 83);
         height: 500px;
         /* display: flex;
 justify-content: center; */
-        background-color: cadetblue;
+        background-color: rgb(207, 182, 106);;
         border-radius: 5rem;
-        box-shadow: 10px 10px 2px 3px;
+        box-shadow: 10px 10px 10px;
     }
 
     #btn {
-        font-size: larger;
+        font-size: 25px;
         height: 50px;
         width: 200px;
         margin-top: 200px;
         margin-left: 150px;
         position: absolute;
-        background-color: blue;
+        background-color: cornflowerblue;
         border-radius: 1rem;
         color: white;
-
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+              border-color: cornflowerblue;
     }
 
     #otp {
@@ -52,7 +54,11 @@ justify-content: center; */
         border-radius: 1rem;
 
     }
-
+#btn:active{
+    background-color: lightgray;
+       border-color:lightgray;
+       color: black;
+}
     #btnn {
         color: white;
         margin-left: 150px;
@@ -63,17 +69,28 @@ justify-content: center; */
         margin-top: 370px;
         position: absolute;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         border-radius: 1rem;
         border-color: red;
     }
 
     #btnn:active{
-        background-color: gray;
+        background-color: lightgray;
+       border-color: lightgray;
+       color: black;
+    }
+    .heading{
+        margin-top: -150px;
+        margin-left: 15px;
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 50px;
+        color: rgb(42, 22, 195);
     }
 </style>
 
 <body>
+    <h1 class="heading">OTP GENERATOR</h1>
     <div class="div1">
         <h1 id="otp">otp</h1>
         <button id="btn" onclick="demo()">Generate Otp</button>
