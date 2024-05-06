@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        padding: 230px;
+        background-color: white;
+    }
+
+    .div1 {
+        width: 500px;
+        border: 1px solid black;
+        height: 500px;
+        /* display: flex;
+justify-content: center; */
+        background-color: cadetblue;
+        border-radius: 5rem;
+        box-shadow: 10px 10px 2px 3px;
+    }
+
+    #btn {
+        font-size: larger;
+        height: 50px;
+        width: 200px;
+        margin-top: 200px;
+        margin-left: 150px;
+        position: absolute;
+        background-color: blue;
+        border-radius: 1rem;
+        color: white;
+
+    }
+
+    #otp {
+        color: white;
+        margin-left: 150px;
+        background-color: green;
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        margin-top: 300px;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 35px;
+        border-radius: 1rem;
+
+    }
+
+    #btnn {
+        color: white;
+        margin-left: 150px;
+        background-color: red;
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        margin-top: 370px;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        border-radius: 1rem;
+        border-color: red;
+    }
+
+    #btnn:active{
+        background-color: gray;
+    }
+</style>
+
+<body>
+    <div class="div1">
+        <h1 id="otp">otp</h1>
+        <button id="btn" onclick="demo()">Generate Otp</button>
+        <button id="btnn" onclick="demo1()">Reset</button>
+    </div>
+    <script>
+        function demo() {
+            let res = Math.random() * 9 * 100000
+            let otps = Math.trunc(res)
+            let otp1 = document.getElementById("otp")
+            otp1.innerHTML = otps
+            // otp1.style.color="red"
+            console.log(b)
+        }
+        function demo1() {
+            let otp2 = document.getElementById("otp")
+            otps = "otp"
+            otp2.innerHTML = otps
+        }
+    </script>
+</body>
+
+</html>
