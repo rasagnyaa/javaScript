@@ -30,12 +30,12 @@ body{
 <script>
     let modebtn=document.getElementById("mode")
     let body=document.getElementsByTagName("body")
-let colors=["light","pink","red","orange","yellow","blue","skyblue","purple","brown","chocloate","green","aqua","forestgreen","hotpink","darkmagenta","crimson","cornflower","coral","darkblue","darkcyan"]
+let rndmclrs=["light","pink","red","orange","yellow","blue","skyblue","purple","brown","chocloate","green","aqua","forestgreen","hotpink","darkmagenta","crimson","cornflower","coral","darkblue","darkcyan"]
     modebtn.addEventListener("click",()=>{
  let clr1=Math.random()
-let clr2=colors.length
+let clr2=rndmclrs.length
 let res=parseInt(clr1*clr2)
-document.body.style.backgroundColor=colors[res]
+document.body.style.backgroundColor=rndmclrs[res]
 
     }  )
   
