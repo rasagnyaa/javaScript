@@ -1,98 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Factorial Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <style>
-    body{
-        justify-content: center;
-        display: flex;
-        margin-top: 200px;
+    body {
+      justify-content: center;
+      display: flex;
+      margin-top: 200px;
     }
-    .div{
-border: 1px solid black;
-height: 350px;
-width: 500px;
-background-color: rgb(81, 168, 168);
-border:1px solid rgb(81, 168, 168);
-border-radius: 2rem;
-box-shadow: 10px 10px 10px gray;
-/* display: flex;
+    .div {
+      border: 1px solid black;
+      height: 350px;
+      width: 500px;
+      background-color: rgb(81, 168, 168);
+      border: 1px solid rgb(81, 168, 168);
+      border-radius: 2rem;
+      box-shadow: 10px 10px 10px gray;
+      /* display: flex;
 justify-content: center; */
     }
-    #btn{
-        margin-top: 100px;
-        height: 50px;
-        width: 200px;
-        margin-left: 140px;
-        position: absolute;
-        font-family: cursive;
-        border-radius: 1rem;
-        border: 1px solid rgb(81, 168, 168);
+    #btn {
+      margin-top: 100px;
+      height: 50px;
+      width: 200px;
+      margin-left: 140px;
+      position: absolute;
+      font-family: cursive;
+      border-radius: 1rem;
+      border: 1px solid rgb(81, 168, 168);
     }
-    #btn:active{
-        background-color: rgb(157, 154, 154);
+    #btn:active {
+      background-color: rgb(157, 154, 154);
     }
-    #input{
-        position: absolute;
-        height: 50px;
-        width: 250px;
-         margin-left: 120px; 
-        text-align: center;
-        font-size: 20px;
-        border-radius: 1rem;
-        border: 1px solid rgb(81, 168, 168);
+    #input {
+      position: absolute;
+      height: 50px;
+      width: 250px;
+      margin-left: 120px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 1rem;
+      border: 1px solid rgb(81, 168, 168);
     }
-#prod{
-    margin-left: 150px;
-    font-size: 20px;
-    margin-top: 200px;
-   
-}
-h3{
-    margin-left: 170px;
-    color: blue;
-}
-h2{
-    margin-left: 190px;
-    color: brown;
-}
-</style>
+    #prod {
+      margin-left: 150px;
+      font-size: 20px;
+      margin-top: 200px;
+    }
+    h3 {
+      margin-left: 170px;
+      color: blue;
+    }
+    h2 {
+      margin-left: 190px;
+      color: brown;
+    }
+  </style>
 <body>
-<div class="div">
-    <h2>Factorial</h2>
-    <h3>Enter a number:</h3>
-    <input type="text" id="input"> 
-<button id=btn>Calculate Factorial</button>
-<h4 id="prod"></h4>
-
-</div>
-    <script>
-       let btn1= document.getElementById("btn")
-       btn1.addEventListener("click", ()=> {
-            let input = document.getElementById("input");
-            let  input1=+input.value
-           
-            let prod = 1;
-
-            if (input1 >= 0) {
-                for (let i = 2; i <= input1; i++) {
-                    prod *= i;
-                }
-                let ip1=document.getElementById("prod")
-                ip1.innerText = `Factorial of  '${input1}' is '${prod}'`
-                ip1.style.color="white"
-               
-                // ip1.style.backgroundColor="red"
-            } else {
-               let ip2 = document.getElementById("prod")
-               
-               ip2.innerText = `*enter a valid number`;
-               ip2.style.color="red"
+    <div class="div">
+        <h2>Factorial</h2>
+        <h3>Enter a number:</h3>
+        <input type="text" id="input" />
+        <button id="btn">Calculate Factorial</button>
+        <h4 id="prod"></h4>
+      </div>
+      <script>
+        let btn1 = document.getElementById("btn");
+        btn1.addEventListener("click", () => {
+          let input = document.getElementById("input");
+          let input1 = +input.value;
+  
+          let prod = 1;
+  
+          if (input1 >= 0) {
+            for (let i = 2; i <= input1; i++) {
+              prod *= i;
             }
+            let ip1 = document.getElementById("prod");
+            ip1.innerText = `Factorial of  '${input1}' is '${prod}'`;
+            ip1.style.color = "white";
+  
+            // ip1.style.backgroundColor="red"
+          } else {
+            let ip2 = document.getElementById("prod");
+  
+            ip2.innerText = `*enter a valid number`;
+            ip2.style.color = "red";
+          }
         });
-      
-    </script>
-
+      </script>
 </body>
 </html>
+
