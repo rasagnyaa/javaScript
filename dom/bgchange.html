@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackgroundColor Change</title>
+</head>
+<style>
+#mode{
+    height: 50px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 1rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    
+}
+#mode:hover{
+    background-color: lightgray;
+    border-color: lightgray;
+    color: black;
+}
+</style>
+<body>
+    <button id="mode">change color</button>
+<script>
+    let modebtn=document.getElementById("mode")
+    let body=document.getElementsByTagName("body")
+let rndmclrs=["light","pink","red","orange","yellow","blue","skyblue","purple","brown","chocloate","green","aqua","forestgreen","hotpink","darkmagenta","crimson","cornflower","coral","darkblue","darkcyan"]
+    modebtn.addEventListener("click",()=>{
+ let clr1=Math.random()
+let clr2=rndmclrs.length
+let res=parseInt(clr1*clr2)
+document.body.style.backgroundColor=rndmclrs[res]
+
+    }  )
+  
+
+
+</script>
+    
+</body>
+</html>

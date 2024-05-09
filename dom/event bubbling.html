@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #grandparent{
+        background-color: aqua;
+    }
+    #parent{
+        background-color: blue;
+    }
+    #child{
+        background-color: brown;
+    }
+
+</style>
+<body>
+    <div id="grandparent">grandparent
+<div id="parent">
+    parent
+    <div id="child">
+        child
+    </div>
+</div>
+</div>==
+    <script>
+let gp=document.getElementById("grandparent")
+let pr=document.getElementById("parent")
+let ch=document.getElementById("child")
+gp.addEventListener("click",()=>{
+    console.log("grandparent triggerd")
+},true)
+pr.addEventListener("click",()=>{
+    console.log("parent triggerd")
+},true)
+ch.addEventListener("click",(e)=>{
+    e.stopImmediatePropagation()
+    console.log("child triggerd")
+},true)
+    </script>
+</body>
+</html>
