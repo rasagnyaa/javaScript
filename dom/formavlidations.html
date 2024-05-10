@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+       <input type="text" id="name" /><br><br>
+       <input type="text" id="pswd"/><br><br>
+       <input type="submit"/>
+    </form>
+    <script>
+        let getform=document.getElementById("myform")
+        getform.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            let existingusers=localStorage.getItem("userdetails")
+            let users=existingusers?JSON.parse(existingusers):[]
+            
+let ip1=document.getElementById("name").value;
+let ip2=document.getElementById("pswd").value;
+let userdetails = {name : ip1,password : ip2}
+// if(existingusers === ip1)
+// (!users.includes(userdetails))
+users.push(userdetails)       
+
+// let data=JSON.stringify(userdetails);
+localStorage.setItem("userdetails",JSON.stringify(users))
+
+
+        })
+    </script>
+</body>
+</html>
