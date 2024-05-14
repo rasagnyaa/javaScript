@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
+    #img1{
+        width:200px;
+
+    }
+   
+    #btnn,#btn{
+        background-color: pink;
+        position: absolute;
+        margin-top: -50px;
+    }
+    #btn{
+        margin-left: 50px;
+       
+    }
+    #btnn{
+        margin-left: 150px;
+    }
+</style>
+<body>
+    <img src="../dom/images/b1.jpg" id="img1" alt="butterfly">
+    <button id="btn">Click</button>
+    <button id="btnn" onclick="reset()">Reset</button>
+    <script>
+        let getbtn=document.getElementById("btn")
+        getbtn.style.backgroundColor="pink"
+        getbtn.style.color="black"
+        getbtn.addEventListener("click",()=>{
+        let img1=document.getElementById("img1")
+img1.setAttribute("src","../dom/images/b2.jpg")
+
+     })
+
+function reset(){
+    let getbtn1=document.getElementById("btnn")
+    getbtn1.style.backgroundColor="pink"
+    // getbtn1.style.color="black"
+    getbtn1.addEventListener("click",()=>{
+        let img2=document.getElementById("img1")
+        img2.setAttribute("src","../dom/images/b1.jpg")
+    })
+}
+
+    </script>
+</body>
+
+</html>

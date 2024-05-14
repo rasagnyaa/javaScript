@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #p1{
+        font-size: 20px;
+    }
+    #btn{
+        width: 150px;
+        height: 50px;
+        background-color: cadetblue;
+        color: white;
+        border: 1px solid cadetblue;
+        font-size: larger;
+        border-radius: 2rem;
+    }
+</style>
+<body>
+   <button id="btn">Click</button>
+ <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, dicta itaque. Praesentium labore iure, illo exercitationem ipsa quibusdam. Inventore, id beatae ad sunt ipsam excepturi laudantium. Architecto dolore laborum expedita.</p>
+<script>
+    let getbtn=document.getElementById("btn")
+    getbtn.addEventListener("click",()=>{
+        let getp1=document.getElementById("p1")
+       
+       if(getp1.style.fontSize==="20px"){
+        getp1.style.fontSize="50px"
+        getp1.style.color="red"
+       }else{
+        getp1.style.fontSize="20px"
+        getp1.style.color="green"
+       }
+    })
+</script>
+</body>
+</html>

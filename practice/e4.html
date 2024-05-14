@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[[2,3,4],[5,3,8,1],[33,44,21,34,56]]
+        s=""
+            for(i of arr){
+            if(i.length%2!==0){
+            mid=Math.floor(i.length/2)
+            s+=i[mid]+" "
+            }else{
+             mid=i.length/2
+             s+=i[mid-1]+" "+i[mid]+" "
+
+            }
+        }
+        console.log(s)
+    </script>
+</body>
+</html>

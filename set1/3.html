@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <ul id="ul">
+        <input id="inp" type="text" placeholder="enter a input">
+    </ul>
+    <script>
+        let getbtn=document.getElementById("btn")
+        let getul=document.getElementById("ul")
+        getbtn.addEventListener("click",()=>{
+            let getinp=document.getElementById("inp")
+            let li1=document.createElement("li")
+            li1.appendChild(getul)
+        })
+
+    </script>
+</body>
+</html>

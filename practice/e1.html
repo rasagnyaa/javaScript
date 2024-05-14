@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger
+        arr=[[1,2,5],[4,3,2],[11,98,66,23]]
+        result=[]
+        for(i=0;i<arr.length;i++){
+            max= arr[i][0]
+            for(j of arr[i]){
+                if(j > max)
+                    max=j
+                
+               
+            }
+            result.push(max)
+        }
+        console.log(result)
+    </script>
+</body>
+</html>

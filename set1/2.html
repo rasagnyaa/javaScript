@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        margin-top: 300px;
+/* background-color: rgb(69, 135, 69); */
+        font-size: 40px;
+    }
+    #div1{
+        /* visibility: visible; */
+        /* border:1px solid black;
+        height: 100px;
+        width:200px;
+        text-align: center;
+        background-color: aqua;
+         */
+
+    }
+    #btn{
+height: 50px;
+width: 150px;
+/* background-color: black; */
+/* color: white; */
+    }
+</style>
+<body>
+    <div id="div1">
+         <b>THANKYOU</b>
+    </div>
+    <button id="btn">CLICK TO SHOW</button>
+    <script>
+let getbtn=document.getElementById("btn")
+getbtn.addEventListener("click",()=>{
+   
+    let getdiv=document.getElementById("div1")
+    
+    if(getdiv.style.visibility ==='hidden'){
+        getdiv.style.visibility ='visible'
+        getdiv.style.color="red"
+        // getdiv.style.backgroundColor="green"
+        // getdiv.style.width="300px"
+getbtn.innerHTML="CLICK TO HIDE"
+getbtn.style.backgroundColor="red"
+        
+    }else{
+        getdiv.style.visibility ='hidden'
+        // // getdiv.style.color="green"
+        // getdiv.style.color="green"
+        getbtn.innerHTML="CLICK TO SHOW"
+        getbtn.style.backgroundColor="green"
+       
+    }
+   
+})
+
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility Example</title>
+    <style>
+        #content {
+            visibility: hidden; /* Initially hide the content */
+            padding: 10px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Show Content</button>
+    <div id="content">
+        This is the content inside the div element.
+    </div>
+
+    <script>
+        document.getElementById ('toggleButton').addEventListener('click', function() {
+            var contentDiv = document.getElementById('content');
+            if (contentDiv.style.visibility === 'hidden') {
+                contentDiv.style.visibility = 'visible';
+                this.textContent = 'Hide Content';
+            } else {
+                contentDiv.style.visibility = 'hidden';
+                this.textContent = 'Show Content';
+            }
+        });
+    </script>
+</body>
+</html> -->

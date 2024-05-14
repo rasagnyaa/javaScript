@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+display: flex;
+justify-content: center;
+margin-top: 200px;
+}
+.div1{
+  background-color: aqua;
+}
+    </style>
+    
+</head>
+<body>
+  <div class="div1">
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+    <h1 id ="timer">00:00:00</h1>
+  </div>
+    <script>
+        // let s1=document.createElement("h1")
+        // rests1.innerHTML="hello"
+        // document.body.appendChild(s1)
+        // let s2=document.createElement("h1" )
+        // s2.innerHTML=0
+        // document.body.appendChild(s2)
+        // let s3=document.createElement("h1")
+        // s3.innerHTML="00"
+        // document.body.appendChild(s3)
+        // // let btn1=document.createElement("button")
+        // // btn1.innerHTML="click me"
+        // // document.body.appendChild(btn1)
+        // // btn1.addEventListener(()=>{
+           
+        // // })
+        //     let i=0
+        //     setInterval(()=>{
+        //     s1.innerHTML=i++
+        //     },1000)
+            
+            
+        //     setInterval(()=>{
+        //     if(i==60){
+        //         s2.innerHTML="1"
+        //     }
+        //     },1000)
+
+            
+        
+        let timer = 0;
+let isRunning = false;
+
+document.getElementById('start').addEventListener('click', startTimer);
+document.getElementById('stop').addEventListener('click', stopTimer);
+document.getElementById('reset').addEventListener('click', resetTimer);
+
+function startTimer(){
+  isRunning=true
+  setInterval(incrementTimer,1000)
+}
+
+// function stopTimer() {
+//   isRunning = false;
+//   clearInterval();
+// }
+
+// function resetTimer() {
+//   timer = 0;
+//   isRunning = false;
+//   clearInterval();
+// }
+
+// function incrementTimer() {
+//   if (isRunning) {
+//     timer++;
+//     displayTimer();
+//   }
+// }
+
+// function displayTimer() {
+//   const hours = Math.floor(timer / 3600);
+//   const minutes = Math.floor((timer % 3600) / 60);
+//   const seconds = timer % 60;
+//   document.getElementById('timer').innerHTML =`${seconds} : ${minutes} : ${hours}`;
+
+        
+// }
+
+//     </script>
+// </body>
+// </html>
+

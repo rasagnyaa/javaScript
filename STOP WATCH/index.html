@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h11">00 : 00 : 00</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+    <script>
+        let i=0
+        let isRunning=false
+let geth1=document.getElementById("h11")
+let getstart=document.getElementById("start")
+getstart.addEventListener("click",(setInterval)=>{
+isRunning=true
+setInterval(increment,1000)
+})
+let getstop=document.getElementById("stop")
+getstop.addEventListener("click",(clearInterval)=>{
+    isRunning=false
+    clearInterval()
+})
+let getreset=document.getElementById("reset")
+getreset.addEventListener("click",(clearInterval)=>{
+    i=0
+isRunning=false
+clearInterval()
+})
+ let increment=(()=>{
+    if(isRunning){
+        i++
+        dispalyTimer()
+    }
+ })
+ function displayTimer() {
+   const hours = Math.floor(i / 3600);
+ const minutes = Math.floor((i % 3600) / 60);
+ const seconds = i % 60;
+   document.getElementById('i').innerHTML =`${seconds} : ${minutes} : ${hours}`;
+
+        
+ }
+
+    </script>
+</body>
+</html>

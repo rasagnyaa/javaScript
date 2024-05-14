@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    debugger
+    arr=[[1,2,5],[1,2,5],[11,98,66,23,11,12,13]]
+    c=0
+    for(i of arr){
+        emp=[]
+        for(j of i){
+            if(!emp.includes(j))
+        emp.push(j)
+        }
+        if(i.length==emp.length)
+        c++
+    }
+    console.log(c)
+ </script>   
+</body>
+</html>
