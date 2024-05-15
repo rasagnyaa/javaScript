@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function asyncFunction3(){
+        let promise = new Promise((resolve,reject)=>{
+          if(!true){
+            setTimeout(() => {
+                console.log("data3")
+                resolve("success")
+            }, 2000);
+        }else{
+            setTimeout(() => {
+                console.log("data3")
+                reject(" promise rejected")
+            }, 3000);
+        }
+    })
+        return promise
+      }  
+
+      function asyncFunction4(){
+        let promise = new Promise((resolve,reject)=>{
+          if(!true){
+            setTimeout(() => {
+                console.log("data4")
+                resolve("success")
+            }, 3000);
+        }else{
+            setTimeout(() => {
+                console.log("data4")
+                reject(" promise rejected")
+            }, 4000);
+        }
+        })
+        return promise
+      } 
+      console.log("fetching data3....")
+      let p3 = asyncFunction3()
+      p3.then((res)=>{
+        console.log(res);
+      })
+      p3.catch((res)=>{
+        console.log(res)
+      })
+      console.log("fetching data4....")
+      let p4 = asyncFunction4()
+      p4.then((res)=>{
+        console.log(res)
+      })
+      p4.catch((res)=>{
+        console.log(res)
+      })
+    </script>
+</body>
+</html>

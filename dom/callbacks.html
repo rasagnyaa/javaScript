@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    
+    function demo1(a){
+        setTimeout(()=>{
+            console.log("hai my name is advitha")
+            a()
+        },1000)
+    }
+    
+    function demo2(b){
+        setTimeout(()=>{
+            console.log("Iam from karimnagar")
+            b()
+        },1000)
+    }
+    function demo3(c){
+        setTimeout(()=>{
+            console.log("hai my name is sanjana")
+            c()
+        },2000)
+    }
+    function demo4(d){
+        setTimeout(()=>{
+            console.log("Iam from warangal")
+            d()
+        },2000)
+    }
+    function demo5(e){
+        setTimeout(()=>{
+            console.log("hai my name is chandhana")
+            e()
+        },2000)
+    }
+    function demo6(){
+        setTimeout(()=>{
+            console.log("Iam from hyderabad")
+        },3000)
+    }
+    // demo1() 
+    // demo2()
+    // demo3()
+    demo1(()=>{
+        demo2(()=>{ // using callbacks
+            demo3(()=>{
+                demo4(()=>{
+                    demo5(()=>{
+                        demo6()
+                    })
+                })
+            })
+        })
+    })
+   </script> 
+</body>
+</html>
