@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .h11{
+        color: red;
+    }
+</style>
+<body>
+    <form id="myform">
+        <input type="text"id="fname" placeholder="enter ur name"/><br><br>
+        <h1 class="h11">hello</h1>
+        <input type="email"id="Ename" placeholder="enter ur email"/><br><br>
+        <h1 class="h11">hello</h1>
+        <input type="number"id="age" placeholder="enter ur age"/><br><br>
+        <h1 class="h11">hello</h1>
+        <input type="submit"><br><br>
+    </form>
+    
+    <script>
+      
+let getform=document.getElementById("myform")
+let fname=document.getElementById("fname")
+let Ename=document.getElementById("Ename")
+let age=document.getElementById("age")
+let geth11=document.getElementsByClassName("h11")
+getform.addEventListener("submit",(e)=>{
+    e.preventDefault()
+  
+if(fname.value ==""){
+    geth11.innerHTML="*enter characters more than 6"
+}else if(Ename.value == ""){
+geth11.innerHTML="*enter valid email"
+}else if(age.value == ""){
+geth11.innerHTML ="*enter age"
+}
+})
+    </script>
+</body>
+</html>
