@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       rows=+prompt("enter number of rows") 
+       cols=+prompt("enter number of cols")
+       matrix=[]
+       for(i=0;i<rows;i++){
+        sub=[]
+        for(j=0;j<cols;j++){
+            console.log("enter "+(i+1)+""+(j+1)+" element: ")
+        ele=+prompt()
+        sub.push(ele)
+         }
+         matrix.push(sub)
+        }
+        console.log(matrix)
+        for(i of matrix){
+            s=""
+            for(j of i){
+                s=s+j+" "
+            }
+            console.log(s)
+        }
+    </script>
+</body>
+</html>

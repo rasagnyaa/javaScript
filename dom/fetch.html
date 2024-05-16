@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH</title>
+</head>
+<style>
+.class1:hover{
+    transform: scale(0.9);
+   
+}
+</style>
+<body>
+    <script>
+        const data=fetch("https://fakestoreapi.com/products")
+        data.then((e)=>e.json()).then((e)=>{
+            let data = e
+            console.log(e)
+            for(i=0;i<=19;i++){
+                let div1=document.createElement("div")
+                document.body.appendChild(div1)
+              
+                div1.setAttribute("class","class1")
+                div1.style.border="1px solid lightgray"
+                div1.style.backgroundColor="lightblue"
+                div1.style.height="500px"
+                div1.style.width="400px"
+                div1.style.margin="10px"
+                div1.style.display="inline-block"
+                div1.style.marginLeft="70px"
+                div1.style.borderRadius="1rem"
+                div1.style.boxShadow="10px 10px 10px lightgray"
+                ///////////////////////////
+                let div2=document.createElement("div")
+                div1.appendChild(div2)
+                // div2.style.border="1px solid black"
+                div2.style.height="20px"
+                div2.style.width="380px"
+                div2.style.margin="10px"
+                div2.style.marginTop="-1px"
+                div2.style.display="inline-block"
+                div2.innerHTML=data[i].category
+                div2.style.backgroundColor="orange"
+                div2.style.borderRadius="1rem"
+
+                div2.style.fontSize="20px"
+                div2.style.textAlign="center"
+                div2.style.position="absolute"
+              ////////////////////////////////////////
+                 let div3=document.createElement("div")
+                 div1.appendChild(div3)
+                // div3.style.border="1px solid black"
+                div3.style.height="50px"
+                div3.style.width="380px"
+                div3.style.margin="10px"
+                div3.style.marginTop="22px"
+                // div3.style.fontSize="18px"
+                div3.style.display="inline-block"
+                div3.innerHTML=data[i].title
+                div3.style.backgroundColor="rgb(84, 84, 143)"
+                div3.style.color="white"
+                div3.style.borderRadius="1rem"
+                div3.style.fontSize="15px"
+                // div2.style.borderRadius="1rem"
+                div3.style.textAlign="center"
+                div3.style.position="absolute"
+                 ////////////////////
+                let div4=document.createElement("div")
+                div1.appendChild(div4)
+                // div4.style.border="1px solid black"
+                div4.style.height="260px"
+                div4.style.width="380px"
+                div4.style.margin="10px"
+                div4.style.display="inline-block"
+                div4.style.marginTop="75px"
+                div4.style.position="absolute"
+                div4.style.backgroundColor="lightyellow"
+                div4.style.borderRadius="1rem"
+                div4.innerHTML=data[i].description
+                div4.style.textAlign="center"
+                ///////
+                let div5=document.createElement("div")
+                div1.appendChild(div5)
+                // div5.style.border="1px solid black"
+                div5.style.height="120px"
+                div5.style.width="380px"
+                div5.style.margin="10px"
+                div5.style.display="inline-block"
+                 div5.style.marginTop="330px"
+                div5.style.position="absolute"
+             ////image////
+                let img1=document.createElement("img")
+                div5.appendChild(img1)
+                img1.style.height="110px"
+                img1.style.width="100px"
+                img1.style.marginLeft="130px"
+                img1.style.marginTop="10px"
+                img1.setAttribute("src",data[i].image)
+                  
+                ////////////////
+                let div6=document.createElement("div")
+                div1.appendChild(div6)
+                // div6.style.border="1px solid black"
+                div6.style.height="20px"
+                div6.style.width="380px"
+                div6.style.margin="10px"
+                div6.style.display="inline-block"
+                 div6.style.marginTop="460px"
+                div6.style.position="absolute"
+                div6.innerHTML=data[i].price
+                div6.style.textAlign="center"
+                div6.style.fontSize="20px"
+                
+                let div7=document.createElement("div")
+                div1.appendChild(div7)
+                div7.setAttribute("class","class1")
+                // div7.style.border="1px solid black"
+                div7.style.height="20px"
+                div7.style.width="20px"
+                div7.style.margin="10px"
+                div7.style.display="inline-block"
+                //  div7.style.marginTop="480px"
+                div7.style.position="absolute"
+                div7.innerHTML="₹"
+                div7.style.color="red"
+                div7.style.marginLeft="150px"
+                div7.style.marginTop="460px"
+                div7.style.textAlign="center"
+                div7.style.fontSize="20px"
+                // div7.style.textAlign="center"
+                let div8=document.createElement("div")
+                div1.appendChild(div8)
+               
+                div8.style.border="1px solid green"
+                div8.style.height="20px"
+                div8.style.width="80px"
+                div8.style.margin="10px"
+                div8.style.display="inline-block"
+                
+                div8.style.position="absolute"
+                div8.innerHTML=data[i].rating.rate
+                div8.style.backgroundColor="green"
+                div8.style.color="white"
+                div8.style.marginLeft="250px"
+                div8.style.marginTop="460px"
+                div8.style.textAlign="center"
+                div8.style.borderRadius="2rem"
+                // div7.style.textAlign="center"
+               
+
+
+
+
+                
+           
+
+            }
+        })
+          
+        
+  
+    
+    
+        
+    </script>
+</body>
+</html>
