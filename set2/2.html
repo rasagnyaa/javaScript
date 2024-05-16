@@ -11,14 +11,11 @@
     }
 </style>
 <body>
-    <form id="myform">
-        <input type="text"id="fname" placeholder="enter ur name"/><br><br>
-        <h1 class="h11">hello</h1>
-        <input type="email"id="Ename" placeholder="enter ur email"/><br><br>
-        <h1 class="h11">hello</h1>
-        <input type="number"id="age" placeholder="enter ur age"/><br><br>
-        <h1 class="h11">hello</h1>
-        <input type="submit"><br><br>
+  <form id="myform">
+        <input type="text"id="fname" placeholder="enter ur name"/><p id="p1"></p>
+        <input type="email"id="Ename" placeholder="enter ur email"/><p id="p2"></p>
+        <input type="number"id="age" placeholder="enter ur age"/><p id="p3"></p><br><br>
+        <input type="submit">
     </form>
     
     <script>
@@ -26,19 +23,34 @@
 let getform=document.getElementById("myform")
 let fname=document.getElementById("fname")
 let Ename=document.getElementById("Ename")
-let age=document.getElementById("age")
-let geth11=document.getElementsByClassName("h11")
+let getage=document.getElementById("age")
+let getp1=document.getElementById("p1")
+let getp2=document.getElementById("p2")
+let getp3=document.getElementById("p3")
 getform.addEventListener("submit",(e)=>{
     e.preventDefault()
-  
-if(fname.value ==""){
-    geth11.innerHTML="*enter characters more than 6"
-}else if(Ename.value == ""){
-geth11.innerHTML="*enter valid email"
-}else if(age.value == ""){
-geth11.innerHTML ="*enter age"
+ 
+let name=fname.value
+let email=Ename.value
+let age=getage.value
+if(name.length<6){
+    getp1.innerHTML="*name is short"
+    getp1.style.color="red"
+}if(name.length>6){
+    getp1.innerHTML="" 
+}
+if(email.length==0){
+    getp2.innerHTML="*email required"
+    getp2.style.color="red"
+}if(email.length>0){
+    getp2.innerHTML=""
+}if(age.length==0){
+    getp3.innerHTML="*age is required"
+    getp3.style.color="red"
+}if(age.length>0){
+    getp3.innerHTML=""
 }
 })
-    </script>
+  </script> 
 </body>
 </html>

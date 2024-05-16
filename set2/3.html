@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click</button>
+    <input type="number" id="inp1" placeholder="enter any number" />
+    <div id="result"></div>
+    
+    <script>
+      let getbtn = document.getElementById("btn");
+      getbtn.addEventListener("click", () => {
+        let getinp = document.getElementById("inp1");
+        let p1 = parseInt(getinp.value);
+        let getdiv = document.getElementById("result");
+        getdiv.innerHTML = "";
+         for(let i = 1; i <= 10; i++) {
+          let row = document.createElement("div");
+          row.innerHTML = `${p1} x ${i} = ${p1 * i}`;
+          row.style.color="blue"
+          getdiv.appendChild(row);
+        }
+      });
+
+        
+    </script>
+  </body>
+</html>

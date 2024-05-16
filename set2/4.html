@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    #btn{
-        width: 150px;
-        height: 50px;
-        background-color: black;
-        color: aliceblue;
-        margin-left: 700px;
-        margin-top: 300px;
-    }
-</style>
 <body>
     <button id="btn">click</button>
+    <ul id="ul1">
+        <li>mango</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>strawberry</li>
+        <li>grapes</li>
+    </ul>
     <script>
 let getbtn=document.getElementById("btn")
 getbtn.addEventListener("click",()=>{
-    alert("hello everyone")
+    let getul=document.getElementById("ul1")
+    getul.remove()
 })
     </script>
 </body>

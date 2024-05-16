@@ -7,18 +7,21 @@
 </head>
 <body>
     <button id="btn">click</button>
-    <ul id="ul">
-        <input id="inp" type="text" placeholder="enter a input">
-    </ul>
-    <script>
-        let getbtn=document.getElementById("btn")
-        let getul=document.getElementById("ul")
-        getbtn.addEventListener("click",()=>{
-            let getinp=document.getElementById("inp")
-            let li1=document.createElement("li")
-            li1.appendChild(getul)
-        })
-
-    </script>
+    <input id="inp" type="text" placeholder="enter a input">
+    <ul id="ul"></ul>
+    <script> 
+let getbtn=document.getElementById("btn")
+getbtn.style.backgroundColor="black"
+getbtn.style.color="white"
+getbtn.addEventListener("click",()=>{
+let getinp=document.getElementById("inp")
+let input = inp.value
+let getul=document.getElementById("ul")
+let li1=document.createElement("li")
+li1.innerHTML=input
+li1.style.color="blue"
+getul.appendChild(li1)
+})
+</script>
 </body>
 </html>

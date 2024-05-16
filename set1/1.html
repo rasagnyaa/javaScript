@@ -5,15 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
+    div{
+    /* border: 1px solid black; */
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(185, 104, 148);
+   }
+   #btn{
+    margin-top: 50px;
+   background-color: black;
+   color: aliceblue;
+   }
+   #p1{
+    margin-top: 50px;
+    font-size: 30px;
+    color: blue;
+   }
+</style>
+<div>
+    
     <p id="p1">HELLO EVERYONE</p>
     <button id="btn">click</button>
+</div>
     <script>
 let getbtn=document.getElementById("btn")
 getbtn.addEventListener("click",()=>{
     let getp1=document.getElementById("p1")
+   if(getp1.innerHTML === "HELLO EVERYONE"){
     getp1.innerHTML="WELCOME"
-    getp1.style.color="red"
+      getp1.style.color="green"
+   }else{
+    getp1.innerHTML="HELLO EVERYONE"
+      getp1.style.color="blue"
+   }
+   
 })
     </script>
 </body>
