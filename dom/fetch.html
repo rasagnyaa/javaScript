@@ -6,12 +6,21 @@
     <title>FETCH</title>
 </head>
 <style>
+    body{
+        position: absolute;
+    }
 .class1:hover{
     transform: scale(0.9);
    
 }
+h1{
+    text-align: center;
+    color: crimson;
+    background-color: black;
+}
 </style>
 <body>
+    <h1>FAKEAPI STORE</h1>
     <script>
         const data=fetch("https://fakestoreapi.com/products")
         data.then((e)=>e.json()).then((e)=>{
@@ -65,7 +74,7 @@
                 // div2.style.borderRadius="1rem"
                 div3.style.textAlign="center"
                 div3.style.position="absolute"
-                 ////////////////////
+                 ////////////////////////////////////
                 let div4=document.createElement("div")
                 div1.appendChild(div4)
                 // div4.style.border="1px solid black"
@@ -79,7 +88,7 @@
                 div4.style.borderRadius="1rem"
                 div4.innerHTML=data[i].description
                 div4.style.textAlign="center"
-                ///////
+                //////////////////////////////////////////////
                 let div5=document.createElement("div")
                 div1.appendChild(div5)
                 // div5.style.border="1px solid black"
@@ -89,7 +98,7 @@
                 div5.style.display="inline-block"
                  div5.style.marginTop="330px"
                 div5.style.position="absolute"
-             ////image////
+             ////image///////////////////////////////////
                 let img1=document.createElement("img")
                 div5.appendChild(img1)
                 img1.style.height="110px"
@@ -98,7 +107,7 @@
                 img1.style.marginTop="10px"
                 img1.setAttribute("src",data[i].image)
                   
-                ////////////////
+                ///////////////////////////////////////////////
                 let div6=document.createElement("div")
                 div1.appendChild(div6)
                 // div6.style.border="1px solid black"
@@ -111,7 +120,7 @@
                 div6.innerHTML=data[i].price
                 div6.style.textAlign="center"
                 div6.style.fontSize="20px"
-                
+                //////////////////////////////////////////////
                 let div7=document.createElement("div")
                 div1.appendChild(div7)
                 div7.setAttribute("class","class1")
@@ -129,6 +138,7 @@
                 div7.style.textAlign="center"
                 div7.style.fontSize="20px"
                 // div7.style.textAlign="center"
+                ////////////////////////////////////////////
                 let div8=document.createElement("div")
                 div1.appendChild(div8)
                
