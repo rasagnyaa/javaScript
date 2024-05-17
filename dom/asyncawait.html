@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        text-align: center;
+        
+    }
+
+</style>
+<body>
+    <script>
+        function fetchData(){
+            let data = fetch("https://fakestoreapi.com/products")
+            return data
+        }
+        async function getData(){
+            let data=await fetchData()
+            let res=await data.json()
+            console.log(res)
+         
+            let dlt=document.createElement("details")
+            let sum=document.createElement("summary")
+            document.body.appendChild(dlt)
+            dlt.appendChild(sum)
+             sum.innerText="TITLES"
+            
+             /////////////////////
+             let dlt1=document.createElement("details")
+            let sum1=document.createElement("summary")
+            document.body.appendChild(dlt1)
+            dlt1.appendChild(sum1)
+             sum1.innerText="CATEGORY"
+             ////////////////////
+             let dlt2=document.createElement("details")
+            let sum2=document.createElement("summary")
+            document.body.appendChild(dlt2)
+            dlt2.appendChild(sum2)
+             sum2.innerText="DESCRIPTION"
+             ///////////images/////////
+             let dlt3=document.createElement("details")
+            let sum3=document.createElement("summary")
+            document.body.appendChild(dlt3)
+            dlt3.appendChild(sum3)
+             sum3.innerText="IMAGES"
+             ///////////////
+             let dlt4=document.createElement("details")
+            let sum4=document.createElement("summary")
+            document.body.appendChild(dlt4)
+            dlt4.appendChild(sum4)
+             sum4.innerText="PRICE"
+             let dlt5=document.createElement("details")
+            let sum5=document.createElement("summary")
+            document.body.appendChild(dlt5)
+            dlt5.appendChild(sum5)
+             sum5.innerText="RATINGS"
+             ////////////////////////////////////////////////////////////////////////////////
+            for(i=0;i<=19;i++){
+            let p1=document.createElement("p")
+            p1.innerHTML=res[i].title
+            p1.style.backgroundColor="lightyellow"
+            p1.style.fontSize="20px"
+            p1.style.textAlign="center"
+            p1.style.color="blue"
+        
+            dlt.appendChild(p1)
+            /////////////////////
+            let p2=document.createElement("p")
+            p2.innerHTML=res[i].category
+            p2.style.backgroundColor="lightgray"
+            p2.style.fontSize="20px"
+            p2.style.textAlign="center"
+            p2.style.color="black"
+            dlt1.appendChild(p2)
+            ////////////////////
+            let p3=document.createElement("p")
+            p3.innerHTML=res[i].description
+            p3.style.backgroundColor="lightgreen"
+            p3.style.fontSize="20px"
+            p3.style.textAlign="center"
+            p3.style.color="red"
+            dlt2.appendChild(p3)
+            //////////////////////
+            let img1=document.createElement("img")
+            img1.style.height="150px"
+             img1.style.width="140px"
+             img1.style.marginLeft="20px"
+             img1.style.marginTop="100px"
+             img1.style.borderRadius="3rem"
+             img1.setAttribute("src",res[i].image)
+            //  dlt3.appendChild(img1)
+            
+             let div=document.createElement("div")
+             div.style.border="1px solid lightgray"
+             div.style.boxShadow="10px 10px 10px gray"
+             div.style.height="300px"
+             div.style.width="450px"
+             div.style.borderRadius="3rem"
+             div.style.display="inline-block"
+             div.style.margin="10px"
+             div.style.backgroundColor="lightgray"
+            
+            
+             div.style.justifyContent="center"
+             dlt3.appendChild(div)
+            //  div.appendChild(p2)
+            //  div.appendChild(p1)
+             div.appendChild(img1)
+            //  div.appendChild(p3)
+            //  div.appendChild(p4)
+            //  div.appendChild(p5)
+             let p4=document.createElement("p")
+            p4.innerHTML=res[i].price
+            p4.style.backgroundColor="pink"
+            p4.style.fontSize="20px"
+            p4.style.textAlign="center"
+            p4.style.color="white"
+            dlt4.appendChild(p4)
+            // div.appendChild(p4)
+            let p5=document.createElement("p")
+            p5.innerHTML=res[i].rating.rate
+            p5.style.backgroundColor="lightblue"
+            p5.style.fontSize="20px"
+            p5.style.textAlign="center"
+            p5.style.color="black"
+            dlt5.appendChild(p5)
+            // div.appendChild(p5)
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+        }
+        getData()
+    </script>
+</body>
+</html>
