@@ -1,3 +1,9 @@
+
+// Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+// Example:
+// reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
+
+
 // function reverseCase(str){
 //   let str1= str.replaceAll("Happy Birthday","hAPPY bIRTHDAY")
 // return str1

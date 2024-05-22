@@ -1,3 +1,8 @@
+
+// 21. Program to find greatest of three numbers(using ternery operator).
+
+// Input:  4 8 2
+// Output: 8 is gretest
 // function Greastest(a,b,c){
 // return (a>b)?((a>c)?a:c):((b>c)?b:c)
 // }

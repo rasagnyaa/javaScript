@@ -1,3 +1,12 @@
+// 20. Create Function that will take one parameter and return type of the data.
+			
+// Input:       500
+// Output:     Integer
+
+// Input:       Coding
+// Output:    String
+
+
 function func(num){
     return (typeof num)
 }
