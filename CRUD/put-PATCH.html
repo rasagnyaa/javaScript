@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">add</button>
+    <script>
+    //    let btn=document.getElementById("btn") 
+    //    let data1={name:"rasagnya",city:"hyd"}
+    //    btn.addEventListener("click",()=>{
+    //     let data=fetch("http://localhost:3000/comments/1",{method:"put",
+    //         headers:{"Content-type":"application/json"},
+    //         body:JSON.stringify(data1)
+    //     })
+    //     data.then((e)=>e.json()).then((e)=>console.log(e));
+    //    })
+    let btn=document.getElementById("btn") 
+       let data1={name:"rasagnya",city:"hyd"}
+       btn.addEventListener("click",()=>{
+        let data=fetch("http://localhost:3000/comments/1",{method:"PATCH",
+            headers:{"Content-type":"application/json"},
+            body:JSON.stringify(data1)
+        })
+        data.then((e)=>e.json()).then((e)=>console.log(e));
+       })
+    </script>
+</body>
+</html>

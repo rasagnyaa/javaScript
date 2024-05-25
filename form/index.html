@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Example</title>
+    <style>
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Form</h1>
+    <form id="dynamicForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" required>
+        <button type="button" onclick="addEntry()">Add</button>
+    </form>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('dynamicForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
+});
+
+function addEntry() {
+    const nameInput = document.getElementById('nameInput');
+    const name = nameInput.value.trim();
+
+    if (name === '') {
+        alert('Name cannot be empty');
+        return;
+    }
+
+    const tableBody = document.querySelector('#dataTable tbody');
+    const newRow = tableBody.insertRow();
+
+    const nameCell = newRow.insertCell(0);
+    nameCell.textContent = name;
+
+    const actionsCell = newRow.insertCell(1);
+    const updateButton = document.createElement('button');
+    updateButton.textContent = 'Update';
+    updateButton.onclick = () => updateEntry(newRow, nameCell);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.onclick = () => deleteEntry(newRow);
+
+    actionsCell.appendChild(updateButton);
+    actionsCell.appendChild(deleteButton);
+
+    nameInput.value = '';
+}
+
+function updateEntry(row, nameCell) {
+    const newName = prompt('Enter the new name:', nameCell.textContent);
+    if (newName !== null && newName.trim() !== '') {
+        nameCell.textContent = newName.trim();
+    }
+}
+
+function deleteEntry(row) {
+    row.remove();
+}
+    </script>
+</body>
+</html>
