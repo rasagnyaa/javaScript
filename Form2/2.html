@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+</head>
+<style>
+    body {
+        background-image: url(./bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    table {
+        border: 3px solid steelblue;
+        color: steelblue;
+        position: relative;
+        left: 500px;
+        top: 60px;
+        border-collapse: collapse;
+    }
+    tr, th, td {
+        border: 1px solid steelblue;
+        color: steelblue;
+        text-align: center;
+        padding: 10px;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(70, 131, 180, 0.241);
+        color: white;
+        font-size: small;
+        font-weight: bold;
+        background-color: dodgerblue;
+        width: 100px;
+        height: 30px;
+        position: relative;
+        top: 350px;
+        left: 670px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <script>
+   
+        var Createtable = document.createElement("table");
+        document.body.appendChild(Createtable);
+        Createtable.setAttribute("class","tab")
+
+
+        var tr = document.createElement("tr");
+        Createtable.appendChild(tr);
+
+        var th1 = document.createElement("th");
+        tr.appendChild(th1);
+        th1.style.fontWeight = "bolder";
+
+        th1.innerText = "Username";
+
+        var th2 = document.createElement("th");
+        tr.appendChild(th2);
+        th2.innerText = "Email";
+
+        var th3 = document.createElement("th");
+        tr.appendChild(th3);
+        th3.innerText = "Password";
+
+        var th4 = document.createElement("th");
+        tr.appendChild(th4);
+        th4.innerText = "ConfirmPassword";
+
+        var userdata = localStorage.getItem('data')
+        var regdata = JSON.parse(userdata)
+        console.log(regdata);
+
+        for (let i = 0; i < regdata.length; i++) {
+
+            var tr1 = document.createElement("tr");
+            Createtable.appendChild(tr1);
+
+            var usdata = document.createElement('td');
+            tr1.appendChild(usdata);
+            usdata.innerText = regdata[i]["Username"];
+
+            var edata = document.createElement('td');
+            tr1.appendChild(edata);
+            edata.innerText = regdata[i]["Email"];
+        
+            var pwddata = document.createElement('td');
+            pwddata.innerText = regdata[i]["Password"];
+            tr1.appendChild(pwddata);
+            
+            var cpwddata = document.createElement('td')
+            cpwddata.innerText = regdata[i]["ConfirmPassword"]
+            tr1.appendChild(cpwddata)
+            
+        }
+        var Cbtn = document.createElement('button')
+        document.body.appendChild(Cbtn)
+        Cbtn.innerText = 'Back'
+        Cbtn.setAttribute("id","btn")
+        Cbtn.addEventListener('click', () => {
+        location.assign('./index.html')
+        }
+        )
+    
+
+  
+    
+    </script>
+</body>
+</html>

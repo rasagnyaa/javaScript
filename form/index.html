@@ -1,90 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Form Example</title>
-    <style>
-        table {
-            width: 50%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
-</head>
-<body>
-    <h1>Dynamic Form</h1>
-    <form id="dynamicForm">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" required>
-        <button type="button" onclick="addEntry()">Add</button>
-    </form>
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Table rows will be added here dynamically -->
-        </tbody>
-    </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table,
+    tr,
+    td,
+    th {
+      border: 1px solid black;
+      height: 50px;
+      width: 500px;
+      border-collapse: collapse;
+    }
+  </style>
 
+  <body>
+    <form  id="myform">
+      <input type="text" id="fname" /><p>hello</p><br />
+      <input type="email" id="mail" /><p></p><br />
+      <input type="number" id="num" /><p></p><br />
+      <input type="submit" />
+    </form action="../form/submit.html">
+    <button id="btn" onclick="add()">Add</button><br /><br />
+    <button id="btn1">Update</button><br /><br />
+    <button id="btn2">Delete</button><br /><br />
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('dynamicForm').addEventListener('submit', (event) => {
+      let getform = document.getElementById("myform");
+      getform.addEventListener("submit", (event) => {
         event.preventDefault();
-    });
-});
+      
+       });
+      let getName = document.getElementById("fname");
+      let getmail = document.getElementById("mail");
+      let getNum = document.getElementById("num");
+      
+      let tab = document.createElement("table");
+      document.body.append(tab);
 
-function addEntry() {
-    const nameInput = document.getElementById('nameInput');
-    const name = nameInput.value.trim();
+      let th1 = document.createElement("th");
+      tab.append(th1);
+      th1.innerText = "name";
 
-    if (name === '') {
-        alert('Name cannot be empty');
-        return;
-    }
+      let th2 = document.createElement("th");
+      tab.append(th2);
+      th2.innerText = "email";
 
-    const tableBody = document.querySelector('#dataTable tbody');
-    const newRow = tableBody.insertRow();
+      let th3 = document.createElement("th");
+      tab.append(th3);
+      th3.innerText = "contact num";
 
-    const nameCell = newRow.insertCell(0);
-    nameCell.textContent = name;
+      // let th4 = document.createElement("th");
+      // tab.append(th4);
+      // th4.innerText = "update";
 
-    const actionsCell = newRow.insertCell(1);
-    const updateButton = document.createElement('button');
-    updateButton.textContent = 'Update';
-    updateButton.onclick = () => updateEntry(newRow, nameCell);
+      // let th5 = document.createElement("th");
+      // tab.append(th5);
+      // th5.innerText = "Delete";
+    
+      function add() {
+       
+       
+        let tr = document.createElement("tr");
+        tab.appendChild(tr);
+        let td1 = document.createElement("td");
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement("td");
+        tr.appendChild(td2);
+        let td3 = document.createElement("td");
+        tr.appendChild(td3);
+        // let td4 = document.createElement("td");
+        // tr.appendChild(td4);
+       
+        // let td5 = document.createElement("td");
+        // tr.appendChild(td5);
+        
+        let inp1 = getName.value;
+        let inp2 = getmail.value;
+        let inp3 = getNum.value;
 
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.onclick = () => deleteEntry(newRow);
-
-    actionsCell.appendChild(updateButton);
-    actionsCell.appendChild(deleteButton);
-
-    nameInput.value = '';
-}
-
-function updateEntry(row, nameCell) {
-    const newName = prompt('Enter the new name:', nameCell.textContent);
-    if (newName !== null && newName.trim() !== '') {
-        nameCell.textContent = newName.trim();
-    }
-}
-
-function deleteEntry(row) {
-    row.remove();
-}
+        td1.innerHTML = inp1;
+        td2.innerHTML = inp2;
+        td3.innerHTML = inp3;
+     
+     }
+     
+    
     </script>
-</body>
+  </body>
 </html>
+
+ <!-- <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <form action="">
+//         <input type="text"/>
+//         <input type="number"/>
+//         <input type="submit"/>
+//     </form>
+//     <button id="btn" onclick="add()">add</button>
+//     <h1 id="inp1">hello</h1>
+//     <script>
+//         console.log(document.forms)
+//         document.forms[0].addEventListener("submit",function(e){
+//             e.preventDefault();
+                
+       
+//             // e.preventDefault()
+//             var Users={
+//             username:e.target[0].value,
+//             password:e.target[1].value
+//         }
+//         console.log(Users)
+      
+
+//         }
+    
+        
+//           }
+//         )
+      
+  
+    
+//     </script>
+// </body>
+// </html> -->

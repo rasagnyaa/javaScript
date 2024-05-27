@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .h11{
+        color: red;
+    }
+</style>
+<body>
+  <form id="myform" action="../set2/2.html">
+        <input type="text"id="fname" placeholder="enter ur name"/><p id="p1"></p>
+        <input type="email"id="Ename" placeholder="enter ur email"/><p id="p2"></p>
+        <input type="number"id="age" placeholder="enter ur age"/><p id="p3"></p><br><br>
+        <input type="submit">
+    </form>
+    
+    <script>
+      
+let getform=document.getElementById("myform")
+let fname=document.getElementById("fname")
+let Ename=document.getElementById("Ename")
+let getage=document.getElementById("age")
+let getp1=document.getElementById("p1")
+let getp2=document.getElementById("p2")
+let getp3=document.getElementById("p3")
+getform.addEventListener("submit",(e)=>{
+    e.preventDefault()
+ 
+let name=fname.value
+let email=Ename.value
+let age=getage.value
+if(name.length<6){
+    getp1.innerHTML="*name is short"
+    getp1.style.color="red"
+}if(name.length>6){
+    getp1.innerHTML="" 
+}
+if(email.length==0){
+    getp2.innerHTML="*email required"
+    getp2.style.color="red"
+}if(email.length>0){
+    getp2.innerHTML=""
+}if(age.length==0){
+    getp3.innerHTML="*age is required"
+    getp3.style.color="red"
+}if(age.length>0){
+    getp3.innerHTML=""
+}
+})
+  </script> 
+</body>
+</html>

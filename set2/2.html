@@ -1,56 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    .h11{
-        color: red;
+  </head>
+  <style>
+    .h11 {
+      color: red;
     }
-</style>
-<body>
-  <form id="myform">
-        <input type="text"id="fname" placeholder="enter ur name"/><p id="p1"></p>
-        <input type="email"id="Ename" placeholder="enter ur email"/><p id="p2"></p>
-        <input type="number"id="age" placeholder="enter ur age"/><p id="p3"></p><br><br>
-        <input type="submit">
+    table,
+    tr,
+    td,
+    th {
+      border: 1px solid black;
+      height: 50px;
+      width: 500px;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <form id="myform">
+      <input type="text" id="fname" placeholder="enter ur name" />
+      <p id="p1"></p>
+      <input type="email" id="Ename" placeholder="enter ur email" />
+      <p id="p2"></p>
+      <input type="number" id="age" placeholder="enter ur age" />
+      <p id="p3"></p>
+      <br /><br />
+      <input type="submit" />
     </form>
-    
+    <button  id="btn1" onclick="add()">add</button>
+    <!-- <button id="btn2" onclick="Update()">Update</button>
+    <button id="btn3" onclick="Delete()">Delete</button> -->
     <script>
+      let getform = document.getElementById("myform");
+      let fname = document.getElementById("fname");
+      let Ename = document.getElementById("Ename");
+      let getage = document.getElementById("age");
+      let getp1 = document.getElementById("p1");
+      let getp2 = document.getElementById("p2");
+      let getp3 = document.getElementById("p3");
+      let tab = document.createElement("table");
+      document.body.append(tab);
+
+      let th1 = document.createElement("th");
+      tab.append(th1);
+      th1.innerText = "name";
+
+      let th2 = document.createElement("th");
+      tab.append(th2);
+      th2.innerText = "email";
+
+      let th3 = document.createElement("th");
+      tab.append(th3);
+      th3.innerText = "age";
+
+      getform.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let inp1 = fname.value;
+        let inp2 = Ename.value;
+        let inp3 = getage.value;
+        if (inp1.length < 6) {
+          getp1.innerHTML = "*name is short";
+          getp1.style.color = "red";
+        }
+        if (inp1.length > 6) {
+          getp1.innerHTML = "";
+        }
+        if (inp2.length == 0) {
+          getp2.innerHTML = "*email required";
+          getp2.style.color = "red";
+        }
+        if (inp2.length > 0) {
+          getp2.innerHTML = "";
+        }
+        if (inp3.length == 0) {
+          getp3.innerHTML = "*age is required";
+          getp3.style.color = "red";
+        }
+        if (inp3.length > 0) {
+          getp3.innerHTML = "";
+        }
       
-let getform=document.getElementById("myform")
-let fname=document.getElementById("fname")
-let Ename=document.getElementById("Ename")
-let getage=document.getElementById("age")
-let getp1=document.getElementById("p1")
-let getp2=document.getElementById("p2")
-let getp3=document.getElementById("p3")
-getform.addEventListener("submit",(e)=>{
-    e.preventDefault()
+      });
+
+      function add() {
+        let tr = document.createElement("tr");
+        tab.appendChild(tr);
+        let td1 = document.createElement("td");
+        tr.appendChild(td1);
+
+        let td2 = document.createElement("td");
+        tr.appendChild(td2);
+        let td3 = document.createElement("td");
+        tr.appendChild(td3);
+
+        let inp1 = fname.value;
+        let inp2 = Ename.value;
+        let inp3 = getage.value;
+
+        td1.innerHTML = inp1;
+        td2.innerHTML = inp2;
+        td3.innerHTML = inp3;
+
+
+    }
+  
  
-let name=fname.value
-let email=Ename.value
-let age=getage.value
-if(name.length<6){
-    getp1.innerHTML="*name is short"
-    getp1.style.color="red"
-}if(name.length>6){
-    getp1.innerHTML="" 
-}
-if(email.length==0){
-    getp2.innerHTML="*email required"
-    getp2.style.color="red"
-}if(email.length>0){
-    getp2.innerHTML=""
-}if(age.length==0){
-    getp3.innerHTML="*age is required"
-    getp3.style.color="red"
-}if(age.length>0){
-    getp3.innerHTML=""
-}
-})
-  </script> 
-</body>
+    </script>
+  </body>
 </html>

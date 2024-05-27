@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <!-- <style>
+      /* body {
+        background-image: url(./bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      input {
+        border: 2px solid rgba(70, 131, 180, 0.241);
+        width: 250px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 100px;
+        left: 600px;
+        margin-top: 15px;
+        margin-left: 20px;
+        border-radius: 10px;
+        color:steelblue;
+        font-weight: bold;
+        text-align: center;
+        outline: none;
+        box-shadow: 0 0 10px steelblue; /* Apply box-shadow */
+  transition: box-shadow 0.3s ease;
+      }
+      #showData {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(70, 131, 180, 0.241);
+        color:white;
+        font-size:small;
+
+        background-color: dodgerblue;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        position: relative;
+        top: 130px;
+        left: 670px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+    </style> */ -->
+  </head>
+  <body>
+    <form action="">
+      <input onclick="hello()" type="text" placeholder="Enter Your Username" />
+      <input onclick="hello()" type="email" placeholder="Enter Your Email"  />
+      <input onclick="hello()" type="password" placeholder="Password" />
+      <input onclick="hello()" type="password" placeholder="ConfirmPassword" />
+      <input type="submit" />
+    </form>
+    <button id="showData">Show Data</button>
+
+    <script>
+
+
+function hello(){
+    var d=document.getElementsByTagName("input");
+    d[0].style.color="steelblue"
+}
+          registeredData=[];
+          document.forms[0].addEventListener('submit', (e) => {
+            e.preventDefault()
+
+        var user = {
+          "Username": e.target[0].value,
+          "Email": e.target[1].value,
+          "Password": e.target[2].value,
+          "ConfirmPassword": e.target[3].value,
+        };
+        registeredData.push(user);
+        console.log(registeredData);
+
+        localStorage.setItem('data', JSON.stringify(registeredData))
+
+             e.target[0].value = ''
+             e.target[1].value = ''
+             e.target[2].value = ''
+             e.target[3].value = ''
+         })
+
+
+      var btn = document.getElementById("showData");
+      btn.addEventListener("click", () => {
+        window.location.assign("../Form2/2.html"); // Redirect to submit.html
+      });
+    </script>
+  </body>
+</html>
