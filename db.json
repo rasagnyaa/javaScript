@@ -10,9 +10,55 @@
     {
       "id": 1,
       "body": "some comment",
-      "postId": 1,
-      "name": "rasagnya",
-      "city": "hyd"
+      "postId": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "number": "",
+      "id": 7
     }
   ],
   "profile": {
