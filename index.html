@@ -5,25 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+table,th,td,tr{
+    border: 1px solid black;
+    height: 50px;
+    width: 400px;
+    border-collapse: collapse;
+}
+</style>
 <body>
-    <!-- <script src="../js/w3/p1.js">problem1</script> -->
-    <!-- <script src="../js/w3/p3.js"></script> -->
-    <!-- <script src="../js/w3/practice/prc1.js"></script> -->
-    <!-- <script src="../strings/prb1.js"></script> -->
-    <!-- <script src="./arrays/arraylength.js"></script> -->
-    <!-- <script src="./april26/task3.js"></script> -->
-    <!-- <script src="./test/q7.js"></script> -->
-    <!-- <script src="./problemSolving/day1/ps1.js"></script>
-    <script src="./problemSolving/day1/ps2.js"></script>
-    <script src="./problemSolving/day1/ps3.js"></script>
-    <script src="./problemSolving/day1/ps4.js"></script>
-    <script src="./problemSolving/day1/ps5.js"></script>
-     -->
-     <!-- <script src="./problemSolving/day2/ps6.js"></script> -->
-     <!-- <script src="./problemSolving/day2/ps7.js"></script> -->
-   <!-- /  <script src="./problemSolving/day2/ps8.js"></script> -->
-   <script src="./problemSolving/day4/ps18.js"></script>
-   <!-- <script src="./problemSolving/day2/ps12.js"></script> -->
-   <!-- <script src="./may03/t1.js"></script> -->
+    <form action="">
+      <input type="text" placeholder="enter ur name"><br><br><br>
+      <input type="password"placeholder="enter ur pswd"/><br><br><br>
+      <input type="submit"value="Submit"/><br><br><br>
+    </form>
+  <!-- <h1 id="h11">hello</h1>
+  <h1 id="h12">bye</h1> -->
+  <table id="mytable">
+    <tr id="tr1">
+        <th id="th1">Name</th>
+        <th id="th1">pswd</th>
+    </tr> 
+     <tr id="tr1">
+        <td id="td1"></td>
+        <td id="td2"></td>
+    </tr>
+    
+  </table><br>
+  <button type="button" id="btn">update</button><br><br><br>
+  <button type="button" id="btn1">delete</button><br><br><br><br>
+   <script>
+    let gettab=document.getElementById("mytable")
+    let getth=document.getElementById("th1")
+
+    // var data=[]
+    document.forms[0].addEventListener("submit",(e)=>{
+    e.preventDefault()
+    var users={
+    username:e.target[0].value,
+    password:e.target[1].value
+   }
+//   data.push(users)
+ let getr1=document.getElementById("tr1")
+ let getd1=document.getElementById("td1")
+ getd1.innerHTML=e.target[0].value
+ let getd2=document.getElementById("td2")
+ getd2.innerHTML=e.target[1].value
+ e.target[0].value=""
+  e.target[1].value=""
+ })
+
+ let getbtn=document.getElementById("btn").addEventListener("click",()=>{
+    let name=prompt("enter a name")
+    let pswd=prompt("enter a name")
+    let getr1=document.getElementById("tr1")
+ let getd1=document.getElementById("td1")
+ getd1.innerHTML=name
+ let getd2=document.getElementById("td2")
+ getd2.innerHTML=pswd
+ })
+ let getbtn1=document.getElementById("btn1").addEventListener("click",()=>{
+   
+    let getr1=document.getElementById("tr1")
+ let getd1=document.getElementById("td1")
+ getd1.innerHTML=""
+ let getd2=document.getElementById("td2")
+ getd2.innerHTML=""
+ })
+   </script>
 </body>
 </html>

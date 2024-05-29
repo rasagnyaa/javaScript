@@ -30,7 +30,7 @@
       <br /><br />
       <input type="submit" />
     </form>
-    <button  id="btn1" onclick="add()">add</button>
+    <!-- <button  id="btn1" onclick="add()">add</button> -->
     <!-- <button id="btn2" onclick="Update()">Update</button>
     <button id="btn3" onclick="Delete()">Delete</button> -->
     <script>
@@ -55,19 +55,24 @@
       let th3 = document.createElement("th");
       tab.append(th3);
       th3.innerText = "age";
-
+      
+     
       getform.addEventListener("submit", (e) => {
         e.preventDefault();
-
+        
         let inp1 = fname.value;
         let inp2 = Ename.value;
         let inp3 = getage.value;
         if (inp1.length < 6) {
           getp1.innerHTML = "*name is short";
           getp1.style.color = "red";
+          
         }
         if (inp1.length > 6) {
           getp1.innerHTML = "";
+    
+
+          
         }
         if (inp2.length == 0) {
           getp2.innerHTML = "*email required";
@@ -75,6 +80,8 @@
         }
         if (inp2.length > 0) {
           getp2.innerHTML = "";
+       
+
         }
         if (inp3.length == 0) {
           getp3.innerHTML = "*age is required";
@@ -82,11 +89,9 @@
         }
         if (inp3.length > 0) {
           getp3.innerHTML = "";
+       
         }
-      
-      });
-
-      function add() {
+       
         let tr = document.createElement("tr");
         tab.appendChild(tr);
         let td1 = document.createElement("td");
@@ -97,16 +102,42 @@
         let td3 = document.createElement("td");
         tr.appendChild(td3);
 
-        let inp1 = fname.value;
-        let inp2 = Ename.value;
-        let inp3 = getage.value;
+       
+        // let inp1 = fname.value;
+        // let inp2 = Ename.value;
+        // let inp3 = getage.value;
 
         td1.innerHTML = inp1;
         td2.innerHTML = inp2;
         td3.innerHTML = inp3;
 
+     
+    fname.value=""
+    Ename.value=""
+    getage.value=""
+      });
 
-    }
+    //   function add() {
+    //     let tr = document.createElement("tr");
+    //     tab.appendChild(tr);
+    //     let td1 = document.createElement("td");
+    //     tr.appendChild(td1);
+
+    //     let td2 = document.createElement("td");
+    //     tr.appendChild(td2);
+    //     let td3 = document.createElement("td");
+    //     tr.appendChild(td3);
+
+    //     let inp1 = fname.value;
+    //     let inp2 = Ename.value;
+    //     let inp3 = getage.value;
+
+    //     td1.innerHTML = inp1;
+    //     td2.innerHTML = inp2;
+    //     td3.innerHTML = inp3;
+
+
+    // }
   
  
     </script>
