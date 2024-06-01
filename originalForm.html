@@ -11,13 +11,49 @@ table,th,td,tr{
     height: 50px;
     width: 400px;
     border-collapse: collapse;
+    margin-left: 550px;
+    margin-top: 200px;
+    text-align: center;
+   
+}
+
+#btn1,#btn{
+  height: 30px;
+  width: 100px;
+  margin-left: 1005px;
+  position: absolute;
+  margin-top: -115px;
+ 
+}
+#inp1{
+  margin-left: 600px;
+  position: absolute;
+  margin-top: 200px;
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  
+}
+#inp2{
+  margin-left: 600px;
+  position: absolute;
+  margin-top: 200px;
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  
+}
+#sbt{
+margin-left: 700px;
+margin-top: 200px;
+position: absolute;
 }
 </style>
 <body>
     <form action="">
-      <input type="text" placeholder="enter ur name"><br><br><br>
-      <input type="password"placeholder="enter ur pswd"/><br><br><br>
-      <input type="submit"value="Submit"/><br><br><br>
+      <input type="text" placeholder="enter ur name" id="inp1"><br><br><br>
+      <input type="password"placeholder="enter ur pswd" id="inp2"/><br><br><br>
+      <input type="submit"value="Submit" id="sbt"/><br><br><br>
     </form>
   <!-- <h1 id="h11">hello</h1>
   <h1 id="h12">bye</h1> -->
@@ -29,6 +65,7 @@ table,th,td,tr{
      <tr id="tr1">
         <td id="td1"></td>
         <td id="td2"></td>
+        
     </tr>
     
   </table><br>
@@ -63,6 +100,7 @@ table,th,td,tr{
  getd1.innerHTML=name
  let getd2=document.getElementById("td2")
  getd2.innerHTML=pswd
+
  })
  let getbtn1=document.getElementById("btn1").addEventListener("click",()=>{
    
