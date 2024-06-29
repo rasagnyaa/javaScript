@@ -7,16 +7,20 @@
 </head>
 <body>
     <button id="btn">add</button>
+    <h id="h1">heloo</h>
     <script>
        let btn=document.getElementById("btn") 
-       let data1={name:"rasagnya",city:"hyd"}
+    //    let data1={name:"rasagnya",city:"hyd"}
        btn.addEventListener("click",()=>{
         let data=fetch("http://localhost:3000/comments",{method:"post",
             headers:{"Content-type":"application/json"},
             body:JSON.stringify(data1)
         })
         data.then((e)=>e.json()).then((e)=>console.log(e));
+        let get=document.getElementById("h1")
+       get.innerHTML=JSON.stringify(data)
        })
+      
     </script>
 </body>
 </html>

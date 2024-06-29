@@ -10,7 +10,7 @@
     <script>
        let btn=document.getElementById("btn") 
        btn.addEventListener("click",()=>{
-        let data=fetch("http://localhost:3000/posts",{method:"get",
+        let data=fetch("https://coinranking1.p.rapidapi.com/stats?referenceCurrencyUuid=yhjMzLPhuIDl",{method:"get",
             headers:{"Content-type":"application/json"},
         })
         data.then((e)=>e.json()).then((e)=>console.log(e));

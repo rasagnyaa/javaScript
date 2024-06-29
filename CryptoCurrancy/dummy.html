@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Adjust as needed */
+}
+
+
+</style>
+<body>
+  <!-- <h1>Top 10 Cryptocurrencies</h1> -->
+  <div id="container"></div>
+    <script>
+      //'https://coingecko.p.rapidapi.com/coins/markets'
+     // Define your API key and the API URL
+const API_KEY = '3de0ccdc45msh340c91f6d451d52p163c20jsnd3898e229393';
+const API_URL = 'https://coingecko.p.rapidapi.com/coins/markets';
+
+// Make a request to the API using fetch
+fetch(`${API_URL}?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`, {
+  method: 'GET',
+  headers: {
+    'x-rapidapi-key': API_KEY,
+    'x-rapidapi-host': 'coingecko.p.rapidapi.com'
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // Log the data to the console
+  let getContainer=document.getElementById("container")
+ for(i=0;i<data.length;i++){
+  const coin=data[i]
+
+const crtDiv=document.createElement("div")
+getContainer.appendChild(crtDiv)
+crtDiv.style.height="100px"
+crtDiv.style.width="400px"
+crtDiv.style.height="200px"
+crtDiv.style.width="200px"
+crtDiv.style.border="1px solid black"
+crtDiv.style.display="inline-block"
+crtDiv.style.gap="20px"
+
+crtDiv.innerHTML=`${coin.id}`
+//symbol
+const crtDiv1=document.createElement("div")
+crtDiv.appendChild(crtDiv1)
+crtDiv1.style.height="100px"
+crtDiv1.style.width="200px"
+crtDiv1.style.border="1px solid black"
+crtDiv1.style.display="inline-block"
+
+crtDiv1.innerHTML=`${coin.symbol}`
+//name
+const crtDiv2=document.createElement("div")
+crtDiv.appendChild(crtDiv2)
+crtDiv2.style.height="100px"
+crtDiv2.style.width="200px"
+crtDiv2.style.border="1px solid black"
+crtDiv2.style.display="inline-block"
+crtDiv2.innerHTML=`${coin.name}`
+//image
+const crtDiv3=document.createElement("div")
+crtDiv.appendChild(crtDiv3)
+crtDiv3.style.height="100px"
+crtDiv3.style.width="200px"
+crtDiv3.style.border="1px solid black"
+crtDiv3.style.display="inline-block"
+const img=document.createElement("img")
+img.setAttribute("src",`${coin.image}`)
+crtDiv3.appendChild(img)
+img.style.height="50px"
+ }
+
+
+
+
+
+    // Get the ul element where we will display the data
+    // const div1 = document.getElementById('divv');
+
+    // Loop through the data and create a list item for each coin
+  //   data.forEach(coin => {
+  //     const div2 = document.createElement('div');
+  //     div2.textContent = `${coin.name}: $${coin.current_price}`;
+  //     div1.appendChild(div2);
+  //   });
+  // })
+  // .catch(error => {
+  //   console.error('Error fetching data:', error);
+  });
+
+    </script>
+</body>
+</html>
